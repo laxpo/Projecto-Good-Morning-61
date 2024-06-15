@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://comlubaum51tk"]
-
-[node name="InteractionManager" type="Node3D"]
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "[E] para interactuar"
