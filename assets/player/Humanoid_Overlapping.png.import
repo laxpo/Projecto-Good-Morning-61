@@ -2,14 +2,14 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwiiobtcalf2"
+uid="uid://diow54gdvcgg4"
 path.s3tc="res://.godot/imported/Humanoid_Overlapping.png-3f3a06d4146eb68e861167aa1f3ade48.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "9a6df69e2a91f76650aa39caf343df01"
+"md5": "fc08d39f0605e4d6860f92d281685a72"
 }
 
 [deps]
