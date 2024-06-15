@@ -50,9 +50,7 @@ func good_boy(señal):
 		if HP <= 0:
 			game_over()
 			return
-	else:
-		#nada
-		pass
+	pass
 	
 #Se resetea el juego	
 func game_over():
