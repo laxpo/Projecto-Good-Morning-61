@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsl21tcn1b8yx"]
+[gd_scene load_steps=5 format=3 uid="uid://dsl21tcn1b8yx"]
 
 [ext_resource type="Script" path="res://scripts/Jugador.gd" id="1_wmelq"]
 [ext_resource type="Script" path="res://scripts/player/interction.gd" id="2_uolc0"]
-[ext_resource type="Script" path="res://scripts/player/interactable_detection.gd" id="3_73ndm"]
-[ext_resource type="Script" path="res://scripts/player/show_interaction_label.gd" id="3_i73la"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4ciwq"]
 
@@ -26,37 +24,5 @@ script = ExtResource("2_uolc0")
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
 
-[node name="InteractRayCast" type="RayCast3D" parent="Neck/Camera3D"]
+[node name="RayCast3D" type="RayCast3D" parent="Neck"]
 target_position = Vector3(0, 0, -2)
-collide_with_areas = true
-script = ExtResource("3_73ndm")
-
-[node name="HUD" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="Action" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Interact" type="Label" parent="HUD/Action"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 25.0
-offset_top = -35.0
-offset_right = 136.0
-offset_bottom = -12.0
-text = "[E] Interactuar"
-script = ExtResource("3_i73la")
-
-[connection signal="interactable_intersected" from="Neck/Camera3D/InteractRayCast" to="HUD/Action/Interact" method="_on_interact_ray_cast_interactable_intersected"]
-[connection signal="interactable_left" from="Neck/Camera3D/InteractRayCast" to="HUD/Action/Interact" method="_on_interact_ray_cast_interactable_left"]

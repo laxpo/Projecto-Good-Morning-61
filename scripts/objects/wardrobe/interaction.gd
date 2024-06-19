@@ -6,4 +6,4 @@ func interact():
 	if !opened:
 		$"../Animation".play("open")
 	else:
-		$"../Animation".play("close")
+		$"../Animation".play("open")
